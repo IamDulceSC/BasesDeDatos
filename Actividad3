@@ -1,0 +1,18 @@
+USE tienda_acme_iniciales;
+CREATE TABLE clientes(id_cliente char(20), nombre varchar(20), primer_apellido varchar(20), segundo_apellido varchar(20), telefono int(15), email varchar(35), id_direccion char(10) fecha_actualizacion timestamp);
+CREATE TABLE direcciones(id_direccion char(20), calle varcahr(20), colonia varchar(20), cp integer(6), municipio varchar(40), estado varchar(30), pais varchar(30), fecha_actualizacion timestamp);
+ALTER TABLE clientes ADD PRIMARY KEY id_cliente;
+ALTER TABLE direcciones ADD PRIMARY KEY id_direccion;
+ALTER TABLE clientes ADD FOREIGN KEY id_direccion;
+INSERT INTO `clientes` (`id_direccion`) VALUES ("Vivamus nibh"),("ac orci."),("enim commodo"),("Curabitur egestas"),("Donec felis"),("odio sagittis"),("at, egestas"),("morbi tristique"),("libero at"),("Donec non");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("dapibus gravida."),("auctor non,"),("nulla vulputate"),("volutpat ornare,"),("sed, facilisis"),("ipsum. Curabitur"),("lacus. Aliquam"),("Nam porttitor"),("arcu. Vivamus"),("mus. Proin");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("amet, faucibus"),("consectetuer euismod"),("felis ullamcorper"),("arcu. Morbi"),("quam. Pellentesque"),("eu dolor"),("nisi dictum"),("dui, nec"),("Mauris eu"),("bibendum sed,");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("dui nec"),("et malesuada"),("scelerisque, lorem"),("Aliquam vulputate"),("Integer sem"),("elit. Nulla"),("sapien. Aenean"),("libero est,"),("ultrices, mauris"),("urna justo");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("Donec est."),("dui nec"),("ipsum. Suspendisse"),("lacinia. Sed"),("lacus. Mauris"),("in consectetuer"),("risus. Nunc"),("ut cursus"),("rhoncus. Donec"),("porttitor interdum.");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("lobortis augue"),("Cras eget"),("tristique pharetra."),("lorem, vehicula"),("ante ipsum"),("dui lectus"),("Morbi quis"),("Duis ac"),("tristique senectus"),("conubia nostra,");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("pede et"),("Suspendisse commodo"),("a nunc."),("egestas. Sed"),("risus. Donec"),("interdum enim"),("Duis at"),("tristique senectus"),("metus. Aenean"),("ante dictum");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("ut, pellentesque"),("molestie tortor"),("fames ac"),("at, iaculis"),("et malesuada"),("lacus. Aliquam"),("Cum sociis"),("convallis, ante"),("ac facilisis"),("sit amet");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("sociis natoque"),("cursus a,"),("Duis volutpat"),("amet ultricies"),("semper, dui"),("amet, consectetuer"),("facilisis vitae,"),("eget metus"),("pharetra. Quisque"),("Etiam laoreet,");
+INSERT INTO `clientes` (`id_direccion`) VALUES ("gravida. Praesent"),("ligula tortor,"),("pharetra ut,"),("euismod et,"),("orci. Ut"),("ut ipsum"),("interdum enim"),("diam. Proin"),("semper rutrum."),("libero dui");
+
+CREATE VIEW clientes_direcciones AS SELECT clientes.id_cliente, clientes.nombre, clientes.primer_apellido, clientes.segundo_apellido, clientes.email, clientes.telefono, direcciones.calle, direcciones.colonia, direcciones.cp, direcciones.estado, direcciones.pais, direcciones.municipio FROM clientes, direcciones WHERE clientes.id_direccion=direcciones.id_direccion;
