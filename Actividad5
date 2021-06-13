@@ -1,0 +1,2 @@
+SHOW DATABASES;
+USE tienda_acme_iniciales;
