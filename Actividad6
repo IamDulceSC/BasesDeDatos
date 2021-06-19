@@ -1,0 +1,8 @@
+USE tienda_acme
+CREATE TABLE ventas(id_venta varchar(30), fecha_venta timestamp, total_venta float, id_cliente char(30));
+ALTER TABLE ventas ADD FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente);
+ALTER TABLE ventas ADD PRIMARY KEY (id_venta);
+CREATE TABLE detalle_venta(id_detalle_venta varchar(30), id_venta varchar(30), sku varchar(50), cantidad_producto varchar(30), precio float, total_x_producto float);
+ALTER TABLE productos ADD PRIMARY KEY (sku);
+ALTER TABLE detalle_venta ADD FOREIGN KEY (sku) REFERENCES productos(sku);
+ALTER TABLE detalle_venta ADD FOREIGN KEY (id_venta) REFERENCES ventas(id_venta);
