@@ -1,5 +1,5 @@
 SHOW DATABASES;
-USE tienda_acme_iniciales;
+USE tienda_acme;
 ALTER TABLE direcciones ADD no_exterior varchar(30) NOT NULL;
 ALTER TABLE direcciones ADD no_interior varchar(30) NOT NULL;
 CREATE TABLE proveedores(id_proveedor varchar(30), proveedor varchar(30), nombre_contacto varchar(70), telefono_contacto integer(15), email_contacto varchar(60), fecha_actualizacion timestamp);
