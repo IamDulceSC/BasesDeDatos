@@ -6,7 +6,6 @@ CREATE TABLE proveedores(id_proveedor varchar(30), proveedor varchar(30), nombre
 INSERT INTO proveedores(id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto) VALUES ("PROV1", "LECHE", "Juan Jimenez", 77511350, "juanj@gmail.com");
 INSERT INTO proveedores(id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto) VALUES ("PROV2", "CARNE", "Roberto Ramirez", 77512829, "robram@gmail.com");
 INSERT INTO proveedores(id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto) VALUES ("PROV3", "QUESO", "Aurora Vera", 77515687, "aurove@gmail.com");
-INSERT INTO proveedores(id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto) VALUES ("PROV3", "QUESO", "Aurora Vera", 77515687, "aurove@gmail.com");
 INSERT INTO proveedores(id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto) VALUES ("PROV4", "VERDURA", "Jose Chavez", 77515904, "chavezj@gmail.com");
 INSERT INTO proveedores(id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto) VALUES ("PROV5", "FRUTA", "Flor Martinez", 77512267, "martflorj@gmail.com");
 CREATE TABLE direcciones_proveedores(id_direccion varchar(30), calle varchar(20), colonia varchar(30), cp integer, municipio varchar(30), estado varchar(20), pais varchar(30), no_exterior varchar(10), no_interior varchar(10), fecha_actualizacion timestamp, id_proveedor varchar(30));
@@ -21,4 +20,6 @@ INSERT INTO direcciones_proveedores(id_direccion, calle, colonia, cp, municipio,
 INSERT INTO direcciones_proveedores(id_direccion, calle, colonia, cp, municipio, estado, pais, no_exterior, no_interior, id_proveedor) VALUES ("DIR9P5", "Ocampo", "La Joya", 43600, "Tulantepec", "Hidalgo", "México", "315", "6", "PROV5");
 INSERT INTO direcciones_proveedores(id_direccion, calle, colonia, cp, municipio, estado, pais, no_exterior, no_interior, id_proveedor) VALUES ("DIR10P6", "Juarez", "San Rafael", 43530, "Tulancingo", "Hidalgo", "México", "120", "7", "PROV5");
 ALTER TABLE proveedores ADD PRIMARY KEY id_proveedor;
-ALTER TABLE direcciones_proveedores ADD FOREIGN KEY (id_proveedor) REFERENCES proveedores;
+ALTER TABLE direcciones_proveedores ADD PRIMARY KEY id_direccion;
+ALTER TABLE direcciones_proveedores ADD CONSTRAINT FKdir_prov FOREIGN KEY (id_proveedor) REFERENCES proveedores(id_proveedor);
+CREATE VIEW proveedores_direcciones_proveedores AS SELECT id_proveedor, proveedor, nombre_contacto, telefono_contacto, email_contacto, id_direccion, calle, colonia, cp, municipio, estado, pais, no_exterior, no_interior FROM proveedores, direcciones_proveedores WHERE proveedores.id_proveedor = direcciones_proveedorees.id_proveedor;
