@@ -2,7 +2,37 @@ USE tienda_acme
 CREATE TABLE ventas(id_venta varchar(30), fecha_venta timestamp, total_venta float, id_cliente char(30));
 ALTER TABLE ventas ADD FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente);
 ALTER TABLE ventas ADD PRIMARY KEY (id_venta);
-CREATE TABLE detalle_venta(id_detalle_venta varchar(30), id_venta varchar(30), sku varchar(50), cantidad_producto varchar(30), precio float, total_x_producto float);
+CREATE TABLE detalle_venta(id_detalle_venta varchar(30), id_venta varchar(30), sku varchar(50), cantidad_producto varchar(30), precio float, total_x_producto float GENERATE ALWAYS AS (cantidad_producto * precio_unitario));
 ALTER TABLE productos ADD PRIMARY KEY (sku);
 ALTER TABLE detalle_venta ADD FOREIGN KEY (sku) REFERENCES productos(sku);
 ALTER TABLE detalle_venta ADD FOREIGN KEY (id_venta) REFERENCES ventas(id_venta);
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-1", 245, "ut dolor");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-2", 416, "quis arcu");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-3", 98, "non quam.");
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV1", "V0621-1", "ad", 2, 31.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV2", "V0621-1", "adipiscing,", 1, 45.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV3", "V0621-1", "adipiscing.", 2, 22.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV4", "V0621-1", "aliquam,", 1, 94.0);
+
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV5", "V0621-2", "volutpat", 2, 69.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV6", "V0621-2", "velit.", 2, 82.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV7", "V0621-2", "urna,", 1, 60.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV8", "V0621-2", "turpis", 1, 46.0);
+
+
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV9", "V0621-3", "facilisis,", 1, 15.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV10", "V0621-3", "conubia", 1, 17.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("ID11", "V0621-3", "diam.", 1, 21.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV12", "V0621-3", "dolor.", 2, 21.0);
