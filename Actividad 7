@@ -27,13 +27,12 @@ VALUES("IDV2", "V0621-7", "neque.", 1, 12.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
 VALUES("IDV3", "V0621-7", "nunc,", 2, 78.0);
 
-
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-8", 136, "erat vitae");
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV1", "V0621-8", "duis", 2, 44.0);
+INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
+VALUES("IDV2", "V0621-8", "egestas,", 1, 48.0);
 -------------------------------
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-8", 416, "erat vitae");
-INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-8", "ad", 2, 31.0);
-INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-8", "adipiscing,", 1, 45.0);
 
 INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-9", 98, "eu neque");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
