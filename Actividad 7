@@ -1,66 +1,71 @@
 USE tienda_acme;
+TRUNCATE TABLE detalle_venta;
+
 INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-4", 107, "eu elit.");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-4", "ad", 2, 31.0);
+VALUES("IDV13", "V0621-4", "ad", 2, 31.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-4", "adipiscing,", 1, 45.0);
+VALUES("IDV14", "V0621-4", "adipiscing,", 1, 45.0);
 
 INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-5", 151, "erat vitae");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-5", "ad", 2, 31.0);
+VALUES("IDV15", "V0621-5", "ad", 2, 31.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-5", "adipiscing,", 1, 45.0);
+VALUES("IDV16", "V0621-5", "adipiscing,", 1, 45.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV3", "V0621-5", "adipiscing.", 2, 22.0);
+VALUES("IDV17", "V0621-5", "adipiscing.", 2, 22.0);
 
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-6", 81, "eu neque");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-6", 112, "eu neque");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-6", "mi", 1, 54.0);
+VALUES("IDV18", "V0621-6", "neque.", 1, 12.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-6", "mollis,", 1, 27.0);
+VALUES("IDV19", "V0621-6", "montes,", 1, 100.0);
 
 INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-7", 368, "eu elit.");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-7", "montes,", 2, 100.0);
+VALUES("IDV20", "V0621-7", "montes,", 2, 100.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-7", "neque.", 1, 12.0);
+VALUES("IDV21", "V0621-7", "neque.", 1, 12.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV3", "V0621-7", "nunc,", 2, 78.0);
+VALUES("IDV22", "V0621-7", "nunc,", 2, 78.0);
 
 INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-8", 136, "erat vitae");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-8", "duis", 2, 44.0);
+VALUES("IDV23", "V0621-8", "duis", 2, 44.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-8", "egestas,", 1, 48.0);
--------------------------------
+VALUES("IDV24", "V0621-8", "egestas,", 1, 48.0);
 
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-9", 98, "eu neque");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-9", 211, "eu neque");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-9", "ad", 2, 31.0);
+VALUES("IDV25", "V0621-9", "erat.", 5, 31.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-9", "adipiscing,", 1, 45.0);
+VALUES("IDV26", "V0621-9", "eros.", 1, 56.0);
 
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-10", 245, "ut dolor");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-10", 265, "ut dolor");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-10", "ad", 2, 31.0);
+VALUES("IDV27", "V0621-10", "est,", 2, 92.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-10", "adipiscing,", 1, 45.0);
+VALUES("IDV28", "V0621-10", "etiam", 3, 27.0);
 
 
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-11", 416, "erat vitae");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-11", 78, "erat vitae");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-11", "ad", 2, 31.0);
+VALUES("IDV29", "V0621-11", "conubia", 2, 17.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-11", "adipiscing,", 1, 45.0);
+VALUES("IDV30", "V0621-11", "duis", 1, 44.0);
 
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-12", 98, "eu neque");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-12", 319, "eu neque");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-12", "ad", 2, 31.0);
+VALUES("IDV31", "V0621-12", "dui,", 1, 18.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-12", "adipiscing,", 1, 45.0);
+VALUES("IDV32", "V0621-12", "congue", 7, 43.0);
 
-INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-13", 245, "eu elit.");
+INSERT INTO ventas(id_venta, total_venta , id_cliente) VALUES ("V0621-13", 176, "eu elit.");
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV1", "V0621-13", "ad", 2, 31.0);
+VALUES("IDV33", "V0621-13", "egestas,", 1, 48.0);
 INSERT INTO detalle_venta(id_detalle_venta, id_venta, sku, cantidad_producto, precio) 
-VALUES("IDV2", "V0621-13", "adipiscing,", 1, 45.0);
+VALUES("IDV34", "V0621-13", "egestas.", 2, 64.0);
+
+
+SELECT nombre FROM clientes INNER JOIN ventas ON clientes.id_cliente=ventas.id_cliente AND ventas.total_venta=(SELECT MAX(total_venta) FROM ventas);
+SELECT nombre FROM clientes INNER JOIN ventas ON clientes.id_cliente=ventas.id_cliente AND ventas.total_venta=(SELECT MIN(total_venta) FROM ventas);
